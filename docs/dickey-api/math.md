@@ -1,24 +1,30 @@
-# Math Endpoints
-
-**Base URL**
-
-```
-https://api.dickey.gg
-```
-
+---
+description: Endpoints for various math functions.
 ---
 
-```
-GET /math/prime/:n
-```
+# Math
 
-> Calculates if `n` is a prime.
-
-Example: `/math/prime/20`
-
-Response:
+**Base URL:**
 
 ```
+https://api.dickey.gg/math
+```
+
+***
+
+### /prime
+
+Calculates if `n` is a prime.
+
+```
+GET /prime/:n
+```
+
+> Example: `GET /math/prime/20`
+
+#### **Response:**
+
+```typescript
 {
     "isPrime": boolean,
     "divisors": [
@@ -28,56 +34,60 @@ Response:
 }
 ```
 
-Constraints:
+#### **Constraints:**
 
--   `n` must be > 1
--   `n` must be a number
+* `n` must be > 1
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/fibonacci/:n
-```
+### /fibonacci
 
-> Calculates the first `n` digits in the Fibonacci Sequence
-
-Example: `/math/fibonacci/5`
-
-Response:
+Calculates the first `n` digits in the Fibonacci Sequence
 
 ```
+GET /fibonacci/:n
+```
+
+> Example: `GET /math/fibonacci/5`
+
+#### Response:
+
+```typescript
 {
     "sequence": number[] (of size n),
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   0 < `n` < 1476
--   `n` must be a number
+* 0 < `n` < 1476
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/random-number?min=x&max=y
-```
+### /random-number
 
-> Generates a random number between `x` and `y` (if `x` and `y` are omitted, `x=0 y=1000`)
-
-Example: `/math/random-number?min=10&max=100`
-
-Response:
+Generates a random number between `x` and `y` (if `x` and `y` are omitted, `x=0 y=1000`)
 
 ```
+GET /random-number?min=x&max=y
+```
+
+> Example: `GET /math/random-number?min=10&max=100`
+
+#### Response:
+
+```typescript
 {
     "number": number,
     "message": string,
@@ -85,397 +95,425 @@ Response:
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `x (min)` < `y (max)`
--   `x` and `y` must be numbers
+* `x (min)` < `y (max)`
+* `x` and `y` must be numbers
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter(s)
+* `400`: Invalid parameter(s)
 
----
+***
 
-```
-GET /math/factorial/:n
-```
+### /factorial
 
-> Calculates the factorial of `n` (`n!`)
-
-Example: `/math/factorial/5`
-
-Response:
+Calculates the factorial of `n` (`n!`)
 
 ```
+GET /factorial/:n
+```
+
+> Example: `GET /math/factorial/5`
+
+#### Response:
+
+```typescript
 {
     "number": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   0 < `n` < 170
--   `n` must be a number
+* 0 < `n` < 170
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/sqrt/:n
-```
+### /sqrt
 
-> Calculates the square root of `n`
-
-Example: `/math/sqrt/25`
-
-Response:
+Calculates the square root of `n`
 
 ```
+GET /sqrt/:n
+```
+
+> Example: `GET /math/sqrt/25`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` > 0
--   `n` must be a number
+* `n` > 0
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/abs/:n
-```
+### /abs
 
-> Calculates the absolute value of `n`
-
-Example: `/math/abs/-5`
-
-Response:
+Calculates the absolute value of `n`
 
 ```
+GET /abs/:n
+```
+
+> Example: `GET /math/abs/-5`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/round/:n
-```
+### /round
 
-> Rounds `n` to the nearest integer
-
-Example: `/math/round/5.5`
-
-Response:
+Rounds `n` to the nearest integer
 
 ```
+GET /round/:n
+```
+
+> Example: `GET /math/round/5.5`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/ceil/:n
-```
+### /ceil
 
-> Rounds `n` up to the nearest integer
-
-Example: `/math/ceil/5.1`
-
-Response:
+Rounds `n` up to the nearest integer
 
 ```
+GET /ceil/:n
+```
+
+> Example: `GET /math/ceil/5.1`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/floor/:n
-```
+### /floor
 
-> Rounds `n` down to the nearest integer
-
-Example: `/math/floor/5.9`
-
-Response:
+Rounds `n` down to the nearest integer
 
 ```
+GET /floor/:n
+```
+
+> Example: `GET /math/floor/5.9`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/sin/:n
-```
+### /sin
 
-> Calculates the sine of `n` (in radians)
-
-Example: `/math/sin/0`
-
-Response:
+Calculates the sine of `n` (in radians)
 
 ```
+GET /sin/:n
+```
+
+> Example: `GET /math/sin/0`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/cos/:n
-```
+### /cos
 
-> Calculates the cosine of `n` (in radians)
-
-Example: `/math/cos/0`
-
-Response:
+Calculates the cosine of `n` (in radians)
 
 ```
+GET /cos/:n
+```
+
+> Example: `GET /math/cos/0`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/tan/:n
-```
+### /tan
 
-> Calculates the tangent of `n` (in radians)
-
-Example: `/math/tan/0`
-
-Response:
+Calculates the tangent of `n` (in radians)
 
 ```
+GET /tan/:n
+```
+
+> Example: `GET /math/tan/0`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/log/:n
-```
+### /log
 
-> Calculates the natural logarithm of `n`
-
-Example: `/math/log/10`
-
-Response:
+Calculates the natural logarithm of `n`
 
 ```
+GET /log/:n
+```
+
+> Example: `GET /math/log/10`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` > 0
--   `n` must be a number
+* `n` > 0
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/log10/:n
-```
+### /log10
 
-> Calculates the base 10 logarithm of `n`
-
-Example: `/math/log10/10`
-
-Response:
+Calculates the base 10 logarithm of `n`
 
 ```
+GET /log10/:n
+```
+
+> Example: `GET /math/log10/10`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` > 0
--   `n` must be a number
+* `n` > 0
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/log2/:n
-```
+### /log2
 
-> Calculates the base 2 logarithm of `n`
-
-Example: `/math/log2/10`
-
-Response:
+Calculates the base 2 logarithm of `n`
 
 ```
+GET /log2/:n
+```
+
+> Example: `GET /math/log2/10`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` > 0
--   `n` must be a number
+* `n` > 0
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/exp/:n
-```
+### /exp
 
-> Calculates `e` raised to the power of `n`
-
-Example: `/math/exp/1`
-
-Response:
+Calculates `e` raised to the power of `n`
 
 ```
+GET /exp/:n
+```
+
+> Example: `GET /math/exp/1`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `n` must be a number
+* `n` must be a number
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***
 
-```
-GET /math/pow/?base=x&exponent=y
-```
+### /pow
 
-> Calculates `x` raised to the power of `y`
-
-Example: `/math/pow/?base=2&exponent=3`
-
-Response:
+Calculates `x` raised to the power of `y`
 
 ```
+GET /pow/?base=x&exponent=y
+```
+
+> Example: `GET /math/pow/?base=2&exponent=3`
+
+#### Response:
+
+```typescript
 {
     "result": number,
     "message": string
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   `x` and `y` must be numbers
--   `x` and `y` must be present
+* `x` and `y` must be numbers
+* `x` and `y` must be present
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter(s)
+* `400`: Invalid parameter(s)
 
----
+***
