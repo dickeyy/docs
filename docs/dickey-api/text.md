@@ -1,48 +1,55 @@
-# Text Endpoints
+---
+description: Endpoints for various text manipulation functions.
+---
+
+# Text
 
 **Base URL**
 
 ```
-https://api.dickey.gg
+https://api.dickey.gg/text
 ```
 
----
+***
+
+### /reverse
+
+Reverses the input text (`x`)
 
 ```
-GET /text/reverse?text=x
+GET /reverse?text=x
 ```
 
-> Reverses the input text (`x`)
+> Example: `GET /text/reverse?text=hello`
 
-Example: `/text/reverse?text=hello`
+#### Response:
 
-Response:
-
-```
+```typescript
 {
     "reversed": string,
     "original": string
-
 }
 ```
 
-Errors:
+#### Errors:
 
--   `400`: No text provided
+* `400`: No text provided
 
----
+***
 
-```
-GET /text/length?text=x
-```
+### /length
 
-> Returns the length of the input text (`x`)
-
-Example: `/text/length?text=hello`
-
-Response:
+Returns the length of the input text (`x`)
 
 ```
+GET /length?text=x
+```
+
+> Example: `GET /text/length?text=hello`
+
+#### Response:
+
+```typescript
 {
     "length": {
         "characters": number,
@@ -52,104 +59,112 @@ Response:
 }
 ```
 
-Errors:
+#### Errors:
 
--   `400`: No text provided
+* `400`: No text provided
 
----
+***
 
-```
-GET /text/uppercase?text=x
-```
+### /uppercase
 
-> Converts the input text (`x`) to uppercase
-
-Example: `/text/uppercase?text=hello`
-
-Response:
+Converts the input text (`x`) to uppercase
 
 ```
+GET /uppercase?text=x
+```
+
+> Example: `GET /text/uppercase?text=hello`
+
+#### Response:
+
+```typescript
 {
     "uppercase": string,
     "original": string
 }
 ```
 
-Errors:
+#### Errors:
 
--   `400`: No text provided
+* `400`: No text provided
 
----
+***
 
-```
-GET /text/lowercase?text=x
-```
+### /lowercase
 
-> Converts the input text (`x`) to lowercase
-
-Example: `/text/lowercase?text=HELLO`
-
-Response:
+Converts the input text (`x`) to lowercase
 
 ```
+GET /lowercase?text=x
+```
+
+> Example: `GET /text/lowercase?text=HELLO`
+
+#### Response:
+
+```typescript
 {
     "lowercase": string,
     "original": string
 }
 ```
 
-Errors:
+#### Errors:
 
--   `400`: No text provided
+* `400`: No text provided
 
----
+***
+
+### /replace
+
+Replaces all occurrences of `search` with `replace` in the input text (`x`)
 
 ```
 GET /text/replace?text=x&search=y&replace=z
 ```
 
-> Replaces all occurrences of `search` with `replace` in the input text (`x`)
+> Example: `GET /text/replace?text=hello&search=he&replace=no`
 
-Example: `/text/replace?text=hello&search=he&replace=no`
+#### Response:
 
-Response:
-
-```
+```typescript
 {
     "replaced": string,
     "original": string
 }
 ```
 
-Errors:
+#### Errors:
 
--   `400`: No text provided
+* `400`: No text provided
 
----
+***
+
+### /lorem
+
+Generates `x` words of lorem ipsum text
 
 ```
 GET /text/lorem?length=x
 ```
 
-> Generates `x` words of lorem ipsum text
+> Example: `GET /text/lorem?length=10`
 
-Example: `/text/lorem?length=10`
+#### Response:
 
-Response:
-
-```
+```typescript
 {
     "lorem": string,
     "length": number
 }
 ```
 
-Constraints:
+#### Constraints:
 
--   0 < `x` < 2000
+* 0 < `x` < 2000
 
-Errors:
+#### Errors:
 
--   `400`: Invalid parameter
+* `400`: Invalid parameter
 
----
+***

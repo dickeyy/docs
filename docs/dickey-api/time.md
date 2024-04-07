@@ -1,24 +1,30 @@
-# Time Endpoints
+---
+description: Endpoints for various time functions.
+---
+
+# Time
 
 **Base URL**
 
 ```
-https://api.dickey.gg
+https://api.dickey.gg/time
 ```
 
----
+***
+
+### /now
+
+Returns the current server time in various formats
 
 ```
-GET /time/now
+GET /now
 ```
 
-> Returns the current server time in various formats
-
-Example: `/time/now`
+> Example: `GET /time/now`
 
 Response:
 
-```
+```typescript
 {
     "time": {
         "unix": {
@@ -44,19 +50,21 @@ Response:
 }
 ```
 
----
+***
+
+### /unix
+
+Converts a unix timestamp (seconds) to various formats
 
 ```
-GET /time/unix/:t
+GET /unix/:t
 ```
 
-> Converts a unix timestamp (seconds) to various formats
+> Example: `GET /time/unix/1709884384`
 
-Example: `/time/unix/1709884384`
+#### Response:
 
-Response:
-
-```
+```typescript
 {
     "time": {
         "unix": {
@@ -82,19 +90,21 @@ Response:
 }
 ```
 
----
+***
+
+### /unix/ms
+
+Converts a unix timestamp (milliseconds) to various formats
 
 ```
-GET /time/unix/ms/:t
+GET /unix/ms/:t
 ```
 
-> Converts a unix timestamp (milliseconds) to various formats
+> Example: `GET /time/unix/ms/1709884384193`
 
-Example: `/time/unix/ms/1709884384193`
+#### Response:
 
-Response:
-
-```
+```typescript
 {
     "time": {
         "unix": {
@@ -120,4 +130,4 @@ Response:
 }
 ```
 
----
+***

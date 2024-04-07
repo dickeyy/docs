@@ -4,7 +4,7 @@ description: Endpoints for various math functions.
 
 # Math
 
-**Base URL:**
+**Base URL**
 
 ```
 https://api.dickey.gg/math
