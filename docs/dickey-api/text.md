@@ -10,7 +10,7 @@ description: Endpoints for various text manipulation functions.
 https://api.dickey.gg/text
 ```
 
-***
+---
 
 ### /reverse
 
@@ -33,9 +33,9 @@ GET /reverse?text=x
 
 #### Errors:
 
-* `400`: No text provided
+-   `400`: No text provided
 
-***
+---
 
 ### /length
 
@@ -61,9 +61,9 @@ GET /length?text=x
 
 #### Errors:
 
-* `400`: No text provided
+-   `400`: No text provided
 
-***
+---
 
 ### /uppercase
 
@@ -86,9 +86,9 @@ GET /uppercase?text=x
 
 #### Errors:
 
-* `400`: No text provided
+-   `400`: No text provided
 
-***
+---
 
 ### /lowercase
 
@@ -111,16 +111,16 @@ GET /lowercase?text=x
 
 #### Errors:
 
-* `400`: No text provided
+-   `400`: No text provided
 
-***
+---
 
 ### /replace
 
 Replaces all occurrences of `search` with `replace` in the input text (`x`)
 
 ```
-GET /text/replace?text=x&search=y&replace=z
+GET /replace?text=x&search=y&replace=z
 ```
 
 > Example: `GET /text/replace?text=hello&search=he&replace=no`
@@ -136,16 +136,16 @@ GET /text/replace?text=x&search=y&replace=z
 
 #### Errors:
 
-* `400`: No text provided
+-   `400`: No text provided
 
-***
+---
 
 ### /lorem
 
 Generates `x` words of lorem ipsum text
 
 ```
-GET /text/lorem?length=x
+GET /lorem?length=x
 ```
 
 > Example: `GET /text/lorem?length=10`
@@ -161,10 +161,10 @@ GET /text/lorem?length=x
 
 #### Constraints:
 
-* 0 < `x` < 2000
+-   0 < `x` < 2000
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
