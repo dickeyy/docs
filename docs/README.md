@@ -11,7 +11,7 @@ description: Documentation for a variety of my projects.
 Dickey API is a generic utility API that I for fun. It has the ability to generate a variety of
 data.
 
-### [Diary] (diary/README.md)
+### [Diary](diary/README.md)
 
 Diary is a secure, private, and open-source place to keep your thoughts, feelings, or whatever else
 you want.
