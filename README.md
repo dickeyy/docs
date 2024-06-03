@@ -1,9 +1,9 @@
-# Dickey Docs
+# Kyle Docs
 
 This repository contains the documentation for a variety of my projects.
 
-I use [GitBook](https://www.gitbook.com) to host the documentation. The documentation is
-written in Markdown and is located in the `docs` folder.
+I use [GitBook](https://www.gitbook.com) to host the documentation. The documentation is written in
+Markdown and is located in the `docs` folder.
 
 ## Modifying the Documentation
 
