@@ -7,7 +7,7 @@ description: Endpoints for various text manipulation functions.
 **Base URL**
 
 ```
-https://api.dickey.gg/text
+https://api.kyle.so/text
 ```
 
 ---

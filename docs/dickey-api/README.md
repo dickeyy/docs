@@ -10,7 +10,7 @@ _somewhat_ useful tools for math, time, and text manipulation.
 ### Base URL
 
 ```
-https://api.dickey.gg
+https://api.kyle.so
 ```
 
 ### Endpoints

@@ -7,10 +7,10 @@ description: Endpoints for various time functions.
 **Base URL**
 
 ```
-https://api.dickey.gg/time
+https://api.kyle.so/time
 ```
 
-***
+---
 
 ### /now
 
@@ -50,7 +50,7 @@ Response:
 }
 ```
 
-***
+---
 
 ### /unix
 
@@ -90,7 +90,7 @@ GET /unix/:t
 }
 ```
 
-***
+---
 
 ### /unix/ms
 
@@ -130,4 +130,4 @@ GET /unix/ms/:t
 }
 ```
 
-***
+---

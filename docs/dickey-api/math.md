@@ -7,10 +7,10 @@ description: Endpoints for various math functions.
 **Base URL**
 
 ```
-https://api.dickey.gg/math
+https://api.kyle.so/math
 ```
 
-***
+---
 
 ### /prime
 
@@ -36,14 +36,14 @@ GET /prime/:n
 
 #### **Constraints:**
 
-* `n` must be > 1
-* `n` must be a number
+-   `n` must be > 1
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /fibonacci
 
@@ -66,14 +66,14 @@ GET /fibonacci/:n
 
 #### Constraints:
 
-* 0 < `n` < 1476
-* `n` must be a number
+-   0 < `n` < 1476
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /random-number
 
@@ -97,14 +97,14 @@ GET /random-number?min=x&max=y
 
 #### Constraints:
 
-* `x (min)` < `y (max)`
-* `x` and `y` must be numbers
+-   `x (min)` < `y (max)`
+-   `x` and `y` must be numbers
 
 #### Errors:
 
-* `400`: Invalid parameter(s)
+-   `400`: Invalid parameter(s)
 
-***
+---
 
 ### /factorial
 
@@ -127,14 +127,14 @@ GET /factorial/:n
 
 #### Constraints:
 
-* 0 < `n` < 170
-* `n` must be a number
+-   0 < `n` < 170
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /sqrt
 
@@ -157,14 +157,14 @@ GET /sqrt/:n
 
 #### Constraints:
 
-* `n` > 0
-* `n` must be a number
+-   `n` > 0
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /abs
 
@@ -187,13 +187,13 @@ GET /abs/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /round
 
@@ -216,13 +216,13 @@ GET /round/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /ceil
 
@@ -245,13 +245,13 @@ GET /ceil/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /floor
 
@@ -274,13 +274,13 @@ GET /floor/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /sin
 
@@ -303,13 +303,13 @@ GET /sin/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /cos
 
@@ -332,13 +332,13 @@ GET /cos/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /tan
 
@@ -361,13 +361,13 @@ GET /tan/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /log
 
@@ -390,14 +390,14 @@ GET /log/:n
 
 #### Constraints:
 
-* `n` > 0
-* `n` must be a number
+-   `n` > 0
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /log10
 
@@ -420,14 +420,14 @@ GET /log10/:n
 
 #### Constraints:
 
-* `n` > 0
-* `n` must be a number
+-   `n` > 0
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /log2
 
@@ -450,14 +450,14 @@ GET /log2/:n
 
 #### Constraints:
 
-* `n` > 0
-* `n` must be a number
+-   `n` > 0
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /exp
 
@@ -480,13 +480,13 @@ GET /exp/:n
 
 #### Constraints:
 
-* `n` must be a number
+-   `n` must be a number
 
 #### Errors:
 
-* `400`: Invalid parameter
+-   `400`: Invalid parameter
 
-***
+---
 
 ### /pow
 
@@ -509,11 +509,11 @@ GET /pow/?base=x&exponent=y
 
 #### Constraints:
 
-* `x` and `y` must be numbers
-* `x` and `y` must be present
+-   `x` and `y` must be numbers
+-   `x` and `y` must be present
 
 #### Errors:
 
-* `400`: Invalid parameter(s)
+-   `400`: Invalid parameter(s)
 
-***
+---
